@@ -1,3 +1,8 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware, combineReducers } from "redux";
+import reduxThunk from "redux-thunk";
 
-export default createStore(() => { })
+import { appReducer } from "./reducers";
+
+export default createStore(combineReducers({
+    app: appReducer
+}), applyMiddleware(reduxThunk))
