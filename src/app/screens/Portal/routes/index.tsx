@@ -1,18 +1,19 @@
 import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 
-import { Layout } from "../shared";
+import { Navbar } from "../components";
 import { Home } from "../screens";
 
 function Routes() {
   const { path } = useRouteMatch();
 
   return (
-    <Layout>
+    <React.Fragment>
+      <Navbar />
       <Switch>
         <Route path={path} component={Home} />
       </Switch>
-    </Layout>
+    </React.Fragment>
   );
 }
 

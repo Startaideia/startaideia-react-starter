@@ -3,15 +3,14 @@ import { Form, Input, Submit } from "@startaideia/react-forms";
 
 import { Container, Footer, Brand, Link } from "./styles";
 import logo from "assets/images/logo.png";
-import { Text } from "app/shared";
 
 function ResetPassword() {
   return (
     <Container>
       <Form theme="starter-theme">
         <Form.Col className="pt-5">
-          <Text value="Vamos te ajudar!" size="18" weight="100" />
-          <Text value="Redefina sua senha" size="36" className="py-3" />
+          <div>Vamos te ajudar!</div>
+          <div>Redefina sua senha</div>
         </Form.Col>
 
         <Input.Email isRequired />

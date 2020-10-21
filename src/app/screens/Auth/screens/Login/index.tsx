@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 
 import { Container, Footer, Brand, Link } from "./styles";
 import logo from "assets/images/logo.png";
-import { Text } from "app/shared";
 
 function Login() {
   const history = useHistory();
@@ -17,8 +16,8 @@ function Login() {
     <Container>
       <Form onSubmit={handleSubmit} theme="starter-theme">
         <Form.Col className="pt-5">
-          <Text value="Seja bem-vindo" size="18" weight="100" />
-          <Text value="Faça login para continuar" size="36" className="py-3" />
+          <div>Seja bem-vindo</div>
+          <div>Faça login para continuar</div>
         </Form.Col>
 
         <Input.Email isRequired />

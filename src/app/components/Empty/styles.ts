@@ -13,3 +13,8 @@ export const Image = styled.img`
   width: 100%;
   max-width: 400px;
 `;
+
+export const Title = {
+  H1: styled.h1``,
+  H2: styled.h2``,
+};

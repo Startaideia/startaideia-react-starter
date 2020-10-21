@@ -2,13 +2,13 @@ import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 
 import { ResetPassword, ForgotPassword, Login, Register } from "../screens";
-import { Layout } from "../shared";
+import { Container } from "./styles";
 
 function Routes() {
   const { path } = useRouteMatch();
 
   return (
-    <Layout>
+    <Container>
       <Switch>
         <Route
           path={`${path}/forgot-password`}
@@ -23,7 +23,7 @@ function Routes() {
         <Route path={`${path}/register`} component={Register} exact />
         <Route path={`${path}/login`} component={Login} exact />
       </Switch>
-    </Layout>
+    </Container>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container, Nav } from "./styles";
-import { useNavigate } from "app/shared";
+import { useNavigate } from "hooks";
 
 function Navbar() {
   const { navigate } = useNavigate();

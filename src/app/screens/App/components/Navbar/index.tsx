@@ -3,7 +3,7 @@ import { GoSignOut } from "react-icons/go";
 
 import { Brand, Group, Aside, Container } from "./styles";
 import logo from "assets/images/logo.png";
-import { useNavigate } from "app/shared";
+import { useNavigate } from "hooks";
 
 function Navbar() {
   const { navigate } = useNavigate();

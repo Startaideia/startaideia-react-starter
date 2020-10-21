@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 
 import { Container, Footer, Brand, Link } from "./styles";
 import logo from "assets/images/logo.png";
-import { Text } from "app/shared";
 
 function Register() {
   const history = useHistory();
@@ -17,13 +16,8 @@ function Register() {
     <Container>
       <Form onSubmit={handleSubmit} theme="starter-theme">
         <Form.Col className="pt-5">
-          <Text value="Seja bem-vindo" size="18" weight="100" />
-          <Text
-            value="Faça seu cadastro"
-            display="block"
-            size="36"
-            className="py-3"
-          />
+          <div>Seja bem-vindo</div>
+          <div>Faça seu cadastro</div>
         </Form.Col>
 
         <Input.Text name="username" label="Nome de usuário" isRequired />

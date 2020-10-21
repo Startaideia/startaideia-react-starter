@@ -1,5 +1,6 @@
-import { Empty } from "app/shared";
 import React from "react";
+
+import { Empty } from "app/components";
 
 function Home() {
   return <Empty />;
