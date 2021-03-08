@@ -3,10 +3,10 @@ import { GoSignOut } from "react-icons/go";
 
 import { Brand, Group, Aside, Container } from "./styles";
 import logo from "assets/images/logo.png";
-import { useNavigate } from "hooks";
+import { useHref } from "hooks";
 
 function Navbar() {
-  const { navigate } = useNavigate();
+  const { open } = useHref();
 
   return (
     <Container>
@@ -14,7 +14,7 @@ function Navbar() {
         <Brand src={logo} />
       </Aside>
       <Group>
-        <Group.Item onClick={navigate("/")}>
+        <Group.Item onClick={open("/")}>
           <GoSignOut />
         </Group.Item>
       </Group>

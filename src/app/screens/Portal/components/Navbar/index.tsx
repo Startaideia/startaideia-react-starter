@@ -1,16 +1,16 @@
 import React from "react";
 
 import { Container, Nav } from "./styles";
-import { useNavigate } from "hooks";
+import { useHref } from "hooks";
 
 function Navbar() {
-  const { navigate } = useNavigate();
+  const { open } = useHref();
 
   return (
     <Container>
       <Nav>
-        <Nav.Item onClick={navigate("/auth/login")}>Entrar</Nav.Item>
-        <Nav.Item onClick={navigate("/auth/register")}>Cadastrar</Nav.Item>
+        <Nav.Item onClick={open("/auth/login")}>Entrar</Nav.Item>
+        <Nav.Item onClick={open("/auth/register")}>Cadastrar</Nav.Item>
       </Nav>
     </Container>
   );

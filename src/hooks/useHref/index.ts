@@ -4,7 +4,11 @@ import { useHistory } from "react-router-dom";
 export default function () {
   const history = useHistory();
 
-  const navigate = useCallback(
+  /**
+   * Handle open a page
+   *
+   */
+  const open = useCallback(
     function (path: string) {
       return function () {
         history.push(path);
@@ -13,7 +17,21 @@ export default function () {
     [history]
   );
 
+  /**
+   * Handle goback on history state
+   *
+   */
+  const back = useCallback(
+    function () {
+      return function () {
+        history.goBack();
+      };
+    },
+    [history]
+  );
+
   return {
-    navigate,
+    back,
+    open,
   };
 }

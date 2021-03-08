@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import Routes from "./routes";
 import store from "store";
 
-function Main() {
+function App() {
   return (
     <Provider store={store}>
       <Routes />
@@ -11,4 +11,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default App;
